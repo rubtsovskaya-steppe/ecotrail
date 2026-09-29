@@ -37,11 +37,11 @@ function createMarkerIcon(number) {
 }
 
 function initYandexMap() {
-  const center = [51.22, 80.95];
+  const center = [51.40, 80.71];
 
   const map = new ymaps.Map('trail-map', {
     center: center,
-    zoom: 11,
+    zoom: 13,
     controls: ['zoomControl', 'fullscreenControl', 'typeSelector']
   });
 
