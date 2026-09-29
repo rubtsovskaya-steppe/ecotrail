@@ -146,12 +146,12 @@ ul {
 }
 
 .hero__label {
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  opacity: 0.9;
-  margin-bottom: 12px;
+  opacity: 0.95;
+  margin-bottom: 16px;
 }
 
 .hero__title {
@@ -250,24 +250,61 @@ ul {
   font-size: 1.05rem;
 }
 
-/* ===== About ===== */
-.about__text {
-  max-width: 720px;
-  margin: 0 auto;
+
+/* ===== About — фото фоном, текст поверх (как hero) ===== */
+.about-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #3d6b4f;
+  background-image: url('../images/about.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden;
+  padding: 0;
 }
 
-.about__text p {
+.about-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 0;
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 90px 20px;
+  max-width: 800px;
+}
+
+.about-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+
+.about-hero__text p {
   margin-bottom: 16px;
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-main);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
 }
 
-.about__text .about-quote {
-  font-style: italic;
-  text-align: center;
-  color: var(--color-primary-dark);
+.about-hero__quote {
+  font-style: italic !important;
+  color: #f0e6c8 !important;
+  font-size: 1.15rem !important;
   padding: 8px 0;
 }
 
